@@ -1,4 +1,4 @@
-# Password Generator
+# Magic Password Constructor // Password Generator
 
 Employees with access to sensitive data want to easily generate a strong, secure password fulfilling security criteria using online password generators.
 
