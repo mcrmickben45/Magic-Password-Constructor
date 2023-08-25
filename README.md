@@ -32,4 +32,9 @@ This Password Generator was created by Ben McCormick using the starter code prov
 ## Website
 https://mcrmickben45.github.io/magic-password-constructor/ 
 
+![Image 1](Images/Password-Generator-1.png)
+![Image 2](Images/Password-Generator-2.png)
+![Image 2](Images/Password-Generator-3.png)
+![Image 2](Images/Password-Generator-4.png)
+
 ## License
