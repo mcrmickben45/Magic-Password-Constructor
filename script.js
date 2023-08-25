@@ -30,7 +30,7 @@ function generatePassword() {
 
   // Following code outlines conditional functions of generator
 
-  const numberOfCharacters = parseInt(prompt("How many characters would you like in your password? Please choose between 8 and 128 characters."));
+  numberOfCharacters = parseInt(prompt("How many characters would you like in your password? Please choose between 8 and 128 characters."));
   
   if (numberOfCharacters < 8 || numberOfCharacters > 128) {
     return "Invalid! Please choose a valid number of characters between 8 and 128.";
@@ -41,7 +41,7 @@ function generatePassword() {
 
   // Following code validates the input from the user given outlined conditions of variables and determines output
 
-  const containsLowercaseCharacters = confirm("Would you like to include lowercase characters?");
+  containsLowercaseCharacters = confirm("Would you like to include lowercase characters?");
   if (containsLowercaseCharacters) {
     possibleCharacters += lowercaseCharacters.join('');
     alert("Your password will contain lowercase characters.");
@@ -49,7 +49,7 @@ function generatePassword() {
     alert("Your password will NOT contain lowercase characters.");
   }
 
-  const containsUppercaseCharacters = confirm("Would you like to include uppercase characters?");
+  containsUppercaseCharacters = confirm("Would you like to include uppercase characters?");
   if (containsUppercaseCharacters) {
     possibleCharacters += uppercaseCharacters.join('');
     alert("Your password will contain uppercase characters.");
@@ -57,7 +57,7 @@ function generatePassword() {
     alert("Your password will NOT contain uppercase characters.");
   }
 
-  const containsNumbers = confirm("Would you like to use numbers?");
+  containsNumbers = confirm("Would you like to use numbers?");
   if (containsNumbers) {
     possibleCharacters += numericCharacters.join('');
     alert("Your password will contain numbers.");
@@ -65,7 +65,7 @@ function generatePassword() {
     alert("Your password will NOT contain numbers.");
   }
 
-  const containsSpecialCharacters = confirm("Would you like to include special characters?");
+    containsSpecialCharacters = confirm("Would you like to include special characters?");
   if (containsSpecialCharacters) {
     possibleCharacters += specialCharacters.join('');
     alert("Your password will contain special characters.");
