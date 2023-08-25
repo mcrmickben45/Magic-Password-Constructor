@@ -1,36 +1,86 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate"); {
-}
-
-// Code defines function of the generator, closed by the return on line #
-function generatePassword(){
-  console.log("Thank you for using this magic password generator!")
-
-// Following code outlines the variables/characters of final password returned
-
-  const numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
-  const specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "{", "]", "}", "|", "'", ";", ":", "<", ",", ">", ".", "/", "?", "`", "~"]
-  const uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",]
-  const lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  const possibleCharacters = []
-
-// Following code provides the conditions of the functions
 
 
-// Following code validates the input from user given outlined conditions of variables
-
-// Following return function finalizes the code and prompts the password to display on the page
-  return "Magically generated password will go here!";
+// Get references to the #generate element
+const generateBtn = document.querySelector("#generate"); {
 }
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  const password = generatePassword();
+  const passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// End of provided assignment code
+
+// Code defines function of the generator, closed by the return on line #
+function generatePassword(){
+  console.log("Thank you for choosing to use our magical password constructor!")
+
+// Outlines variables/characters in password output
+
+const numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
+const specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "{", "]", "}", "|", "'", ";", ":", "<", ",", ">", ".", "/", "?", "`", "~"]
+const uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",]
+const lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+let possibleCharacters = "";
+
+// Outlines conditional functions of generator
+
+const numberOfCharacters = parseInt(prompt("How many characters would you like in your password? Please choose between 8 and 128 characters."));
+  if (numberOfCharacters < 8 || numbersOfCharacters > 128){
+  return "Invalid! Please choose a valid number of characters between 8 and 128.";
+  } else {
+  console.log("The number is between 8 and 128.");
+  console.log ("Your password will be" + numberOfCharacters + "characters long.")
+}
+
+// Following code validates the input from user given outlined conditions of variables
+const containsLowercaseCharacters = confirm("Would you like to include lowercase characters?");
+  if (containsLowercaseCharacters) {
+  possibleCharacters += lowercaseCharacters;
+    alert("Your password contain lowercase characters.");
+  } else {
+    alert("Your password will NOT contain lowercase characters.");
+  }
+
+const containsUppercaseCharacters = confirm("Would you like to include uppercase characters?");
+  if (containsUppercaseCharacters) {
+  possibleCharacters += uppercaseCharacters;
+    alert("Your password will contain uppercase characters.");
+  } else {
+    alert("Your password will NOT contain uppercase characters.");
+  }
+
+const containsNumbers = confirm("Would you like to use numbers?");
+  if (containsNumber) {
+  possibleCharacters += numericCharacters;
+    alert("Your password will contain numbers.");
+  } else {
+    alert("Your password will NOT contain numbers.");
+  }
+
+const containsSpecialCharacters = confirm("Would you like to include special characters?");
+  if (containsSpecialCharacters) {
+  possibleCharacters += specialCharacters;
+    alert("Your password will contain special characters.");
+  } else {
+    alert("Your password will NOT contain special characters.");
+  }
+
+  if (!containsLowercaseChracters && !containsUppercaseCharacters && !containsNumbers && !containsSpecialCharacters) {
+    return "Please select at least one character type.";
+  }
+
+let finalPassword = "";
+  for (let i = 0; i < numberOfCharacters; i++) {
+    const rng = Math.floor(Math.random() * possibleCharacters.length);
+    finalPassword += possibleCharacters.charAt[rng];
+  }
+  return finalPassword;
+}
